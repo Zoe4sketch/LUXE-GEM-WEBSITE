@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Enquiry | WEDE5020 Jewelry</title>
+    <meta name="description" content="Compute an estimated luxury custom production quote instantly with Luxe Gems.">
+    <meta name="keywords" content="jewelry store, luxe gems, custom quote, rings, earrings">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    
+    <!-- Header/Navigation matching your design -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">Luxe Gems</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="branches.html">Branches</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="active" href="enquiry.html">Enquire</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <!-- Two-column grid structure matching contact.html -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; align-items: start;">
+            
+            <!-- LEFT COLUMN: Content & Details -->
+            <div>
+                <span class="eyebrow" style="text-transform: uppercase; color: #b59410; font-weight: bold; letter-spacing: 1px; font-size: 0.9rem;">Custom Request</span>
+                <h1 style="font-size: 2.8rem; line-height: 1.1; margin: 15px 0; color: #1a1a1a;">Let's calculate your quote.</h1>
+                <p style="color: #666; margin-bottom: 30px; font-size: 1.05rem;">Use the form to select your preferred product availability, quantity, and custom modifications. This project computes estimated production quotes instantly.</p>
+                
+                <div style="background: #f9f9f9; padding: 25px; border-radius: 8px; border: 1px solid #e0e0e0; margin-top: 40px;">
+                    <h3 style="margin-bottom: 15px; color: #1a1a1a;">Enquiry Summary</h3>
+                    <div id="enquiryResponse" class="response-box" style="font-size: 1rem; color: #555;">Your instant quote estimation calculations will appear here after clicking submit.</div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Form Fields matching Picture 1 structure -->
+            <div style="background: #f9f9f9; padding: 35px; border-radius: 8px; border: 1px solid #e0e0e0; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                <form id="enquiryForm" class="web-form" style="display: flex; flex-direction: column; gap: 20px;">
+                    
+                    <div>
+                        <label for="clientName" style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.9rem; color: #333;">Full name</label>
+                        <input type="text" id="clientName" required placeholder="e.g. Jane Doe" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; background: #fff; font-size: 1rem;">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div>
+                            <label for="itemType" style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.9rem; color: #333;">Jewelry piece type</label>
+                            <select id="itemType" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; background: #fff; font-size: 1rem; height: 48px;">
+                                <option value="" disabled selected>-- Choose an Item --</option>
+                                <option value="earrings">Earrings (R450)</option>
+                                <option value="necklace">Necklaces (R1200)</option>
+                                <option value="ring">Rings (R850)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="quantity" style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.9rem; color: #333;">Quantity</label>
+                            <input type="number" id="quantity" min="1" value="1" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; background: #fff; font-size: 1rem; height: 48px;">
+                        </div>
+                    </div>
+
+                    <div style="margin: 10px 0; display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="engraving" style="width: 18px; height: 18px; cursor: pointer; accent-color: #b59410;">
+                        <label for="engraving" style="font-size: 0.95rem; color: #444; cursor: pointer;">Include Custom Engraving? (+R150 per item)</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn" style="background: #b59410; color: #fff; border: none; padding: 14px; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background 0.3s; margin-top: 10px;">Calculate Estimated Quote</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
